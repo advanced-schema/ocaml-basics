@@ -16,14 +16,14 @@ Library basics
   FindlibName: ocaml-basics
   Install: true
   InternalModules:
+  Modules:
+    Basics,
     OBApplicative,
     OBMap,
     OBMonad,
     OBMonoid,
     OBOption,
     OBResult
-  Modules:
-    Basics
   BuildDepends:
     result
   XMETARequires:
