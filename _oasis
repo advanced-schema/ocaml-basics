@@ -1,0 +1,39 @@
+OASISFormat: 0.4
+Name: OCaml Basics
+Version: 0.1.0
+Synopsis: Implements common functionnal patterns / abstractions
+Authors: Antoine Luciani
+License: MIT
+Plugins: META (0.4), DevFiles (0.4)
+BuildTools: ocamlbuild
+
+Flag examples
+  Description: Build examples
+  Default: false
+
+Library basics
+  Path: lib
+  FindlibName: ocaml-basics
+  Install: true
+  InternalModules:
+    OBApplicative,
+    OBMap,
+    OBMonad,
+    OBMonoid,
+    OBOption,
+    OBResult
+  Modules:
+    Basics
+  BuildDepends:
+    result
+  XMETARequires:
+    result
+
+Executable ex1
+  Path: examples
+  MainIs: ex1.ml
+  CompiledObject: best
+  Install: false
+  Build$: flag(examples)
+  BuildDepends:
+    ocaml-basics
