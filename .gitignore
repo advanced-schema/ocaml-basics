@@ -1,0 +1,10 @@
+*.swp
+*~
+*.native
+*.byte
+_build
+Makefile
+_tags
+configure
+setup.*
+myocamlbuild.ml
