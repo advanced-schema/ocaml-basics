@@ -16,6 +16,6 @@ install: [make "install"]
 remove: ["ocamlfind" "remove" "ocaml-basics"]
 depends: [
   "ocamlfind" {build}
-  "result"
+  "result" {>= "1.2"}
 ]
 available: [ ocaml-version >= "4.04" ]
