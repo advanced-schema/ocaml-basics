@@ -6,7 +6,7 @@ authors: "Advanced Schema"
 homepage: "http://github.com/advanced-schema/ocaml-basics"
 bug-reports: "http://github.com/advanced-schema/ocaml-basics/issues"
 license: "MIT"
-dev-repo: "http://github.com/advanced-schema/ocaml-basics"
+dev-repo: "https://github.com/advanced-schema/ocaml-basics.git"
 build: [
   ["./configure" "--prefix=%{prefix}%"]
   [make]
