@@ -17,3 +17,4 @@ depends: [
   "ocamlfind" {build}
   "result"
 ]
+available: [ ocaml-version >= "4.04" ]
