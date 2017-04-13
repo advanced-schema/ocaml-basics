@@ -20,5 +20,6 @@ depends: [
   "result" {>= "1.2"}
   "ppx_sexp_conv" {>= "0.9"}
   "sexplib" {>= "0.9"}
+  "ppx_deriving" {>= "4.0"}
 ]
 available: [ ocaml-version >= "4.04" ]
