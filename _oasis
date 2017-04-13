@@ -25,9 +25,13 @@ Library basics
     OBOption,
     OBResult
   BuildDepends:
-    result
+    ppx_sexp_conv,
+    result,
+    sexplib
   XMETARequires:
-    result
+    ppx_sexp_conv,
+    result,
+    sexplib
 
 Executable ex1
   Path: examples
