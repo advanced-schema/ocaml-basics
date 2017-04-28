@@ -19,6 +19,7 @@ Library basics
   Modules:
     Basics,
     OBApplicative,
+    OBDeferred,
     OBMap,
     OBMonad,
     OBMonoid,
