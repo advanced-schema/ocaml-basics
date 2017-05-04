@@ -10,6 +10,8 @@ module type S = sig
 
   include module type of Monad.Core
   include module type of Applicative.Core
+  include OBTraversable.S2
+    with type ('a, 'b) t := ('a, 'b) t
 
   module Infix: sig
     include module type of Monad.Infix
@@ -45,6 +47,7 @@ module Make (Backend: OBMonad.S1): S
 
   include Monad.Core
   include Applicative.Core
+  include OBTraversable.Make2(Monad)
 
   module Infix = struct
     include Monad.Infix
