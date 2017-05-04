@@ -24,7 +24,8 @@ Library basics
     OBMonad,
     OBMonoid,
     OBOption,
-    OBResult
+    OBResult,
+    OBTraversable
   BuildDepends:
     ppx_sexp_conv,
     result,
