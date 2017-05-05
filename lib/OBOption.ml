@@ -14,6 +14,7 @@ module Applicative = OBApplicative.Make1(Kernel)
 
 include Monad.Core
 include Applicative.Core
+include OBTraversable.Make1(Monad)
 
 module Infix = struct
   include Monad.Infix
