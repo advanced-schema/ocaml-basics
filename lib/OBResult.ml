@@ -20,6 +20,8 @@ module type S = sig
     -> ('ok, 'err Accu.t) t
     -> ('ok, 'err Accu.t) t
 
+  val get_ok: default: 'a -> ('a, _) t -> 'a
+
   module Infix: sig
     include module type of Monad.Infix
     include module type of Applicative.Infix
@@ -64,6 +66,10 @@ module Make(Accu: OBMonoid.S): S
     | Ok _, _ -> lhs
     | _, Ok _ -> rhs
     | Error a, Error b -> Error (Accu.add a b)
+
+  let get_ok ~default = function
+    | Ok x -> x
+    | Error _ -> default
 
   module Infix = struct
     include Monad.Infix
