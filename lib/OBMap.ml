@@ -51,3 +51,6 @@ let traverse'
     | Error err, Ok _
     | Ok _, Error err -> Error err
     | Ok accu, Ok value' -> Ok (add key value' accu)) map (Ok empty)
+
+let sequence map = traverse (fun _ x -> x) map
+let sequence' map = traverse' (fun _ x -> x) map
