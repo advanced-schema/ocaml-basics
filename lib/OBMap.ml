@@ -37,3 +37,17 @@ let traverse
       | Error x -> raise (Exception x)
       | Ok value' -> add key value' accu) map empty)
   with Exception x -> Error x
+
+let traverse'
+  (type a)
+  (type b)
+  (f: key -> a -> (b, string list) Result.t)
+  (map: a t)
+  : (b t, string list) Result.t
+=
+  fold (fun key value accu ->
+    match accu, f key value with
+    | Error err1, Error err2 -> Error (Result.Accu.add err1 err2)
+    | Error err, Ok _
+    | Ok _, Error err -> Error err
+    | Ok accu, Ok value' -> Ok (add key value' accu)) map (Ok empty)
