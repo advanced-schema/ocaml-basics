@@ -1,6 +1,6 @@
 OASISFormat: 0.4
 Name: OCaml Basics
-Version: 0.2.0
+Version: 0.3.0
 Synopsis: Implements common functionnal patterns / abstractions
 Authors: Antoine Luciani
 License: MIT
