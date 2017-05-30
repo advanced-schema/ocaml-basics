@@ -1,5 +1,12 @@
 # Ocaml Basics
 
+## v0.3.0
+
+* `9a31703` Implement Map.traverse and Map.traverse'
+* `b70bfe0` Implement an alternative Map.traverse
+* `2f1df99` Add a get_ok function to results
+* `5ac5e52` Fix versions of some opam deps
+
 ## v0.2.0
 
 * create a Traversable module to easily add the traverse function to any monad
