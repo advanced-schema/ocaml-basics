@@ -2,7 +2,7 @@ OASISFormat: 0.4
 Name: OCaml Basics
 Version: 0.3.0
 Synopsis: Implements common functional patterns / abstractions
-Authors: Antoine Luciani
+Authors: Advanced Schema
 License: MIT
 Plugins: META (0.4), DevFiles (0.4)
 BuildTools: ocamlbuild
