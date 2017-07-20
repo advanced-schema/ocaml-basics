@@ -14,6 +14,8 @@ module type S = sig
   include module type of Applicative.Core
   include OBTraversable.S2
     with type ('a, 'b) t := ('a, 'b) t
+  include OBFoldable.S2
+    with type ('a, 'b) t := ('a, 'b) t
 
   val choose:
     ('ok, 'err Accu.t) t
@@ -60,6 +62,7 @@ module Make(Accu: OBMonoid.S): S
   include Applicative.Core
 
   include OBTraversable.Make2(Monad)
+  include OBFoldable.Make2(Monad)
 
   let choose lhs rhs =
     match lhs, rhs with
