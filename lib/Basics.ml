@@ -6,3 +6,4 @@ module Monoid = OBMonoid
 module Option = OBOption
 module Result = OBResult
 module Traversable = OBTraversable
+module Foldable = OBFoldable
