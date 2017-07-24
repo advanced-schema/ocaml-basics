@@ -1,5 +1,11 @@
 # Ocaml Basics
 
+## v0.4.0
+
+* Make Deferred, Option and Result foldable (`b617fd5`, `a7cc20d`, `86b7e6e`)
+* Add an OBFoldable module (also accessible through Basics.Foldable
+  (`0241e19`, `c225293`)
+
 ## v0.3.0
 
 * `9a31703` Implement Map.traverse and Map.traverse'
