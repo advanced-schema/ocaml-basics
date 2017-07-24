@@ -1,6 +1,6 @@
 opam-version: "1.2"
 name: "ocaml-basics"
-version: "0.3.0"
+version: "0.4.0"
 maintainer: "Antoine Luciani <aluciani@advanced-schema.com>"
 authors: "Advanced Schema"
 homepage: "http://github.com/advanced-schema/ocaml-basics"
