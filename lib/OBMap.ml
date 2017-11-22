@@ -30,13 +30,15 @@ let traverse
   (map: a t)
   : (b t, err) Result.t
 =
-  let exception Exception of err in
+  let module M = struct
+    exception Exception of err
+  end in
   try
     Ok (fold (fun key value accu ->
       match f key value with
-      | Error x -> raise (Exception x)
+      | Error x -> raise (M.Exception x)
       | Ok value' -> add key value' accu) map empty)
-  with Exception x -> Error x
+  with M.Exception x -> Error x
 
 let traverse'
   (type a)
