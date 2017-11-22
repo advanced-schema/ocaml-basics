@@ -1,3 +1,15 @@
+# v0.5.0
+
+* `e63d564` Update change log.
+* `2c57d7a` Adapt change log format to topkg workflow
+* `56976e3` Create pkg/pkg.ml
+* `ba78a8c` Create README.md
+* `fa0c900` Add version value to Basics module
+* `fe848c8` Replace oasis-based opam workflow by jbuilder-based one
+* `73ed7a1` Replace _oasis by jbuild files
+* `1b094ee` Fix compatibility with OCaml 4.03.0
+* `a46775e` Rename opam file
+
 # v0.4.0
 
 * Make Deferred, Option and Result foldable (`b617fd5`, `a7cc20d`, `86b7e6e`)
