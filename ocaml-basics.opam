@@ -1,6 +1,5 @@
 opam-version: "1.2"
 name: "ocaml-basics"
-version: "0.4.0"
 maintainer: "Antoine Luciani <aluciani@advanced-schema.com>"
 authors: "Advanced Schema"
 homepage: "http://github.com/advanced-schema/ocaml-basics"
@@ -8,15 +7,11 @@ bug-reports: "http://github.com/advanced-schema/ocaml-basics/issues"
 license: "MIT"
 dev-repo: "https://github.com/advanced-schema/ocaml-basics.git"
 build: [
-  ["oasis" "setup"]
-  ["./configure" "--prefix=%{prefix}%"]
-  [make]
+  ["jbuilder" "subst" "-n" name] {pinned}
+  ["jbuilder" "build" "-p" name "-j" jobs]
 ]
-install: [make "install"]
-remove: ["ocamlfind" "remove" "ocaml-basics"]
 depends: [
-  "ocamlfind" {build}
-  "oasis" {>= "0.4"}
+  "jbuilder" {>= "1.0+beta16"}
   "result" {>= "1.2"}
   "ppx_sexp_conv" {>= "v0.9"}
   "sexplib" {>= "v0.9"}
