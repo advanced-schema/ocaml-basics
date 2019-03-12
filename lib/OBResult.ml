@@ -8,7 +8,6 @@ module type S = sig
   type ('ok, 'err) t = ('ok, 'err) result =
     | Ok of 'ok
     | Error of 'err
-    [@@deriving sexp]
 
   include module type of Monad.Core
   include module type of Applicative.Core
@@ -43,7 +42,6 @@ module Make(Accu: OBMonoid.S): S
   type ('ok, 'err) t = ('ok, 'err) result =
     | Ok of 'ok
     | Error of 'err
-    [@@deriving sexp]
 
   module Kernel = struct
     type nonrec ('ok, 'err) t = ('ok, 'err) t
