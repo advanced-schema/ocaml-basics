@@ -13,8 +13,5 @@ build: [
 depends: [
   "jbuilder" {>= "1.0+beta16"}
   "result" {>= "1.2"}
-  "ppx_sexp_conv" {>= "v0.9"}
-  "sexplib" {>= "v0.9"}
-  "ppx_deriving" {>= "4.0"}
 ]
 available: [ ocaml-version >= "4.03" ]
