@@ -1,3 +1,8 @@
+# v0.7.0
+
+* `9d981ea` Migrate to dune
+* `813e8ee` Comply to opam file v2.0 format
+
 # v0.6.0
 
 * `c7f9882`, `8f8c2ef` Stop generating sexp functions
