@@ -1,3 +1,7 @@
+# v0.6.0
+
+* `c7f9882`, `8f8c2ef` Stop generating sexp functions
+
 # v0.5.0
 
 * `e63d564` Update change log.
